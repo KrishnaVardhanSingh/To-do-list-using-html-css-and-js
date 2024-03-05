@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(243, 243, 123), rgb(86, 86, 194));
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 5rem;
+}
+
+.container{
+  background-color: white;
+  width: 24rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 1rem 1rem 1rem #555;
+}
+
+.clear{
+  /* background-color: #FF643B; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.clear button{
+  height: 3rem;
+  width: 100%;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #FF643B;
+  cursor: pointer;
+  font-size: 1.0rem;
+}
+.clear button:hover{
+  transition: 0.3s;
+  scale: 0.9;
+}
+.clear button:active{
+  transition: 0.3s;
+  scale: 1;
+}
+.titel{
+  /* background-color: rgb(147, 101, 41); */
+  width: 100%;
+  height: 3rem;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 900;
+  padding-left: 0.5rem;
+  color: #505050;
+  margin-bottom: 1rem;
+}
+.titel img{
+  height: 60%;
+  margin-left: 0.5rem;
+}
+.searchBox{
+  background-color: rgb(214, 214, 214);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 2rem;
+}
+.searchBox #textArea{
+  flex: 1;
+  height: 3.5rem;
+  border: none;
+  border-radius: 2rem;
+  position: relative;
+  background: transparent;
+  padding-left: 1.4rem;
+  outline: none;
+}
+.searchBox button{
+  width: 6rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 2rem;
+  position: absolute end;
+  color: white;
+  background-color: #FF643B;
+  outline: none;
+  cursor: pointer;
+}
+.searchBox button:hover{
+  transition: 0.3s;
+  scale: 1.1;
+}
+.searchBox button:active{
+  transition: 0.3s;
+  scale: 1;
+}
+.items{
+  /* background-color: aqua; */
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  color: #505050;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* issue in long paragraphs */
+.items ul{
+  display: flex;
+  flex-direction: row;
+  /* background-color: #FF643B; */
+  align-items: center;
+  margin-top: 1rem;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+  height: auto;
+}
+
+.items ul::before{
+  /* must write content = '' else it wont work */
+  content: '';
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-image: url(unchecked.png);
+  background-position: center;
+  background-size: cover;
+  margin-right: 1rem;
+}
+.items ul.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+.items ul.checked::before{
+  content: '';
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background-image: url(checked.png);
+  background-position: center;
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.items ul span{
+  position: absolute;
+  right: 0rem;
+  font-size: 1.4rem;
+  color: #555;
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+  }
+.items ul span:hover{
+  transition: 0.3s;
+  scale: 1.2;
+}
+
